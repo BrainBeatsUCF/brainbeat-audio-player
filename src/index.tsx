@@ -2,8 +2,6 @@ import * as React from 'react';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 
-// Todo: add width as a props for user to use
-
 interface AudioObject {
   title: string,
   authorName: string,
@@ -324,7 +322,6 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   }
 
   return (
-    // style={{textAlign: 'center', color: 'white', }} 
     <div style={props.style}>
       <div className={classes.pictureContainer}>
         <div className={classes.pictureBorder}>
