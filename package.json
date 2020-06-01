@@ -1,0 +1,19 @@
+{
+  "name": "brainbeats-audio-player",
+  "version": "1.0.0",
+  "description": "Audio Player for Brain Beats org",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "https://github.com/BrainBeatsUCF/brainbeat-audio-player.git",
+  "author": "Hung Nguyen <hn9581@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "axios": "^0.19.2",
+    "react": "^16.13.1"
+  }
+}
