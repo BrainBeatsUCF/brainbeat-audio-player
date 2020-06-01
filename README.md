@@ -29,7 +29,7 @@ import AudioPlayer from 'brainbeats-audio-player';
 const Player = () => {
   <AudioPlayer 
     style={{textAlign: 'center', color: 'white', width: '100%'}} 
-    audioObjectArrays={audioObjectArray} 
+    audioObjectArray={audioObjectArray} 
   />
 }
 ```

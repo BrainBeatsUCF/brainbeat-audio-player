@@ -10,7 +10,7 @@ interface AudioObject {
 }
 
 interface AudioPlayerProps { 
-  audioObjectArrays: AudioObject[],
+  audioObjectArray: AudioObject[],
   style?: React.CSSProperties
 }
 
@@ -100,16 +100,16 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   }
 
   const playAudio = async () => {
-    const url = 'https://cors-anywhere.herokuapp.com/' + props.audioObjectArrays[playingIndex].audioUrl;
+    const url = 'https://cors-anywhere.herokuapp.com/' + props.audioObjectArray[playingIndex].audioUrl;
     const response = await axios.get(url, {
       responseType: 'arraybuffer',
       headers: {'Access-Control-Allow-Origin': '*'},
     });
 
-    // setAudioUrl(props.audioObjectArrays[playingIndex].audioUrl);
-    setTitle(props.audioObjectArrays[playingIndex].title);
-    setAuthorName(props.audioObjectArrays[playingIndex].authorName);
-    setImageUrl(props.audioObjectArrays[playingIndex].imageUrl);
+    // setAudioUrl(props.audioObjectArray[playingIndex].audioUrl);
+    setTitle(props.audioObjectArray[playingIndex].title);
+    setAuthorName(props.audioObjectArray[playingIndex].authorName);
+    setImageUrl(props.audioObjectArray[playingIndex].imageUrl);
     
     audioContext = getAudioContext();
     const audioBuffer = await audioContext.decodeAudioData(response.data);
@@ -154,7 +154,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
       setIsPlaying(false);
       scriptNode.onaudioprocess = null;
 
-      if (playingIndex == props.audioObjectArrays.length - 1)
+      if (playingIndex == props.audioObjectArray.length - 1)
           setPlayingIndex(0);
         else 
           setPlayingIndex(playingIndex + 1);
@@ -168,7 +168,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
 
     let nextIndex = playingIndex - 1;
     if (nextIndex < 0)
-      setPlayingIndex(props.audioObjectArrays.length - 1);
+      setPlayingIndex(props.audioObjectArray.length - 1);
     else
       setPlayingIndex(nextIndex);
   }
@@ -189,7 +189,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
     isNew = true;
 
     let nextIndex = playingIndex + 1;
-    if (nextIndex >= props.audioObjectArrays.length)
+    if (nextIndex >= props.audioObjectArray.length)
       setPlayingIndex(0);
     else
       setPlayingIndex(nextIndex);
@@ -210,7 +210,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
     if (scriptNode != null)
       scriptNode.onaudioprocess = null;
 
-    const url = 'https://cors-anywhere.herokuapp.com/' + props.audioObjectArrays[playingIndex].audioUrl;
+    const url = 'https://cors-anywhere.herokuapp.com/' + props.audioObjectArray[playingIndex].audioUrl;
     
     const response = await axios.get(url, {
       responseType: 'arraybuffer'
@@ -250,7 +250,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
       setIsPlaying(false);
       scriptNode.onaudioprocess = null;
       
-      if (playingIndex == props.audioObjectArrays.length - 1)
+      if (playingIndex == props.audioObjectArray.length - 1)
         setPlayingIndex(0);
       else 
         setPlayingIndex(playingIndex + 1);
