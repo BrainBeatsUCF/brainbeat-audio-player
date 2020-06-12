@@ -1,10 +1,12 @@
 {
-  "name": "brainbeats-audio-player",
+  "name": "@brainbeatsucf/brainbeat-audio-player",
   "version": "1.0.2",
   "description": "Audio Player for Brain Beats org",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": "https://github.com/BrainBeatsUCF/brainbeat-audio-player.git",
+  "repository": {
+    "url": "git://github.com/brainbeatsucf/brainbeat-audio-player.git"
+  },
   "author": "Hung Nguyen <hn9581@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -16,6 +18,7 @@
   "dependencies": {
     "@material-ui/core": "^4.10.0",
     "axios": "^0.19.2",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-h5-audio-player": "^3.1.0"
   }
 }
