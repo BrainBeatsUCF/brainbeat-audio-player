@@ -1,13 +1,18 @@
-# brainbeat-audio-player
+# brainbeats-audio-player
 
-# Installation
-React: 13.10.1
+# NPM Installation
+
 ```
-npm i brainbeats-audio-player
-```
-or
-```
-yarn add brainbeats-audio-player
+In the same directory with package.json
+
+# Create npmrc file so the project can talk to github package
+touch .npmrc
+
+# Point the project to BrainbeatsUCF org
+echo registry=https://npm.pkg.github.com/BrainBeatsUCF >> .npmrc
+
+# Install the audio package
+npm install @brainbeatsucf/brainbeats-audio-player
 ```
 
 # Properties for the component
@@ -24,11 +29,12 @@ interface AudioObject {
 
 # Usage
 ```
-import AudioPlayer from 'brainbeats-audio-player';
+import BrainBeatsAudioPlayer from '@brainbeatsucf/brainbeats-audio-player';
+import '@brainbeatsucf/brainbeats-audio-player/src/style.css';
 
 const Player = () => {
   <AudioPlayer 
-    style={{textAlign: 'center', color: 'white', width: '100%'}} 
+    style={{width: 400}} 
     audioObjectArray={audioObjectArray} 
   />
 }
