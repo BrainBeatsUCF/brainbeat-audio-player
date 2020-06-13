@@ -51,7 +51,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const BrainBeatAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
+const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   const classes = useStyles();
   const audioLength = props.audioObjectArray.length;
   const [indexPlaying, setIndexPlaying] = React.useState(0);
@@ -101,5 +101,5 @@ const BrainBeatAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   );
 };
 
-export default BrainBeatAudioPlayer;
+export default BrainBeatsAudioPlayer;
 
