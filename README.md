@@ -1,5 +1,13 @@
 # brainbeats-audio-player
 
+# Development and Publishing
+```
+Commit to master
+yarn build
+npm version ...
+npm publish
+```
+
 # NPM Installation
 
 ```
