@@ -18,6 +18,7 @@ npm install @brainbeatsucf/brainbeats-audio-player
 # Properties for the component
 style?: React.CSSProperties
 audioObjectArray: AudioObject[]
+setPlayingIndexAudioPackage: any
 
 where AudioObject is:
 interface AudioObject {
@@ -27,15 +28,24 @@ interface AudioObject {
   audioUrl: string
 }
 
+
+
 # Usage
 ```
 import BrainBeatsAudioPlayer from '@brainbeatsucf/brainbeats-audio-player';
 import '@brainbeatsucf/brainbeats-audio-player/src/style.css';
 
 const Player = () => {
+  const [playingIndex, setPlayingIndex] = useState(0);
+  
+  const setPlayingIndexAudioPackage = (playingIndexAudioPackage: number) => {
+    setPlayingIndex(playingIndexAudioPackage);
+  };
+
   <AudioPlayer 
     style={{width: 400}} 
-    audioObjectArray={audioObjectArray} 
+    audioObjectArray={audioObjectArray}
+    setPlayingIndexAudioPackage={setPlayingIndexAudioPackage}
   />
 }
 ```
