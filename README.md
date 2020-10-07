@@ -16,6 +16,7 @@ npm install @brainbeatsucf/brainbeats-audio-player
 ```
 
 # Properties for the component
+```
 style?: React.CSSProperties
 setPlayingIndexAudioPackage: any
 audioObjectArray: AudioObject[]
@@ -27,6 +28,7 @@ interface AudioObject {
   imageUrl: string,
   audioUrl: string
 }
+```
 
 
 
