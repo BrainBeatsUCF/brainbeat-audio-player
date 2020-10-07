@@ -13,7 +13,7 @@ interface AudioObject {
 interface AudioPlayerProps { 
   audioObjectArray: AudioObject[],
   style?: React.CSSProperties,
-  setPlayingIndexAudioPackage: any,
+  // setPlayingIndexAudioPackage: any,
 }
 
 const useStyles = makeStyles(() => ({
