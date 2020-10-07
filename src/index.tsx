@@ -12,7 +12,8 @@ interface AudioObject {
 
 interface AudioPlayerProps { 
   audioObjectArray: AudioObject[],
-  style?: React.CSSProperties
+  style?: React.CSSProperties,
+  setPlayingIndexAudioPackage: any
 }
 
 const useStyles = makeStyles(() => ({
@@ -77,6 +78,10 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
     setIndexPlaying(newIndex);
   }
 
+  React.useEffect(() => {
+    props.setPlayingIndexAudioPackage(indexPlaying);
+  }, [indexPlaying]);
+
   return (
     <div>
       <div style={{ display: 'flex', alignContent: 'center', justifyContent: 'center'}}>
@@ -90,7 +95,7 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
         onClickPrevious={playBackward}
         onClickNext={playForward}
         src={props.audioObjectArray[indexPlaying].audioUrl}
-        onPlay={e => console.log("onPlay")}
+        onPlay={e => props.setPlayingIndexAudioPackage(indexPlaying)}
         onEnded={playForward}
         header={props.audioObjectArray[indexPlaying].title + ` by ` + props.audioObjectArray[indexPlaying].authorName}
         showSkipControls
