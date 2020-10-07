@@ -17,8 +17,8 @@ npm install @brainbeatsucf/brainbeats-audio-player
 
 # Properties for the component
 style?: React.CSSProperties
-audioObjectArray: AudioObject[]
 setPlayingIndexAudioPackage: any
+audioObjectArray: AudioObject[]
 
 where AudioObject is:
 interface AudioObject {
