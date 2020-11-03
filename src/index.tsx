@@ -2,15 +2,10 @@ import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-// @ts-ignore
-// import PlayButton from './assets/playButton.png';
-// // @ts-ignore
-// import BackwardButton from './assets/backButton.png';
-// // @ts-ignore
-// import PauseButton from './assets/pauseButton.png';
-// // @ts-ignore
-// import ForwardButton from './assets/forwardButton.png';
-// @ts-ignore
+const PlayButton = require('./assets/playButton.png');
+const BackwardButton = require('./assets/backButton.png');
+const PauseButton = require('./assets/pauseButton.png');
+const ForwardButton = require('./assets/forwardButton.png');
 
 interface AudioObject {
   title: string,
@@ -109,12 +104,12 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
         header={props.audioObjectArray[indexPlaying].title + ` by ` + props.audioObjectArray[indexPlaying].authorName}
         showSkipControls
         showJumpControls = {false}
-        // customIcons = {{
-        //   play: PlayButton,
-        //   forward: ForwardButton,
-        //   pause: PauseButton,
-        //   previous: BackwardButton,
-        // }}
+        customIcons = {{
+          play: PlayButton,
+          forward: ForwardButton,
+          pause: PauseButton,
+          previous: BackwardButton,
+        }}
         autoPlay
       />
     </div>
