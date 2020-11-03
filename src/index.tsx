@@ -111,7 +111,7 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
         style={props.style}
         onClickPrevious={playBackward}
         onClickNext={playForward}
-        src={props.audioObjectArray[indexPlaying].audioUrl}
+        src={props.audioObjectArray[props.startingPlayingIndex].audioUrl}
         onPlay={e => props.setPlayingIndexAudioPackage(indexPlaying)}
         onEnded={playForward}
         header={props.audioObjectArray[indexPlaying].title + ` by ` + props.audioObjectArray[indexPlaying].authorName}
