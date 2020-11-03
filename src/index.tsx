@@ -63,6 +63,8 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   const classes = useStyles();
   const audioLength = props.audioObjectArray.length;
 
+  console.log('props.startingPlayingIndex: ' + props.startingPlayingIndex);
+
   // Todo: props.startIndexPlaying
   const [indexPlaying, setIndexPlaying] = React.useState(props.startingPlayingIndex);
   const PlayButtonIcon = <img src={PlayButton} alt='Play Button'></img>
