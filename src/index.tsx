@@ -2,10 +2,10 @@ import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-const PlayButton = require('./assets/playButton.png');
-const BackwardButton = require('./assets/backButton.png');
-const PauseButton = require('./assets/pauseButton.png');
-const ForwardButton = require('./assets/forwardButton.png');
+const PlayButton = require('../public/assets/playButton.png');
+const BackwardButton = require('../public/assets/backButton.png');
+const PauseButton = require('../public/assets/pauseButton.png');
+const ForwardButton = require('../publicassets/forwardButton.png');
 
 interface AudioObject {
   title: string,
