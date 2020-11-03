@@ -5,11 +5,10 @@ import 'react-h5-audio-player/lib/styles.css';
 // @ts-ignore
 import PlayButton from './assets/playButton.png';
 // @ts-ignore
-import BackwardButton from './assets/backButton.png';
-// @ts-ignore
 import PauseButton from './assets/pauseButton.png';
 // @ts-ignore
 import ForwardButton from './assets/forwardButton.png';
+// @ts-ignore
 
 interface AudioObject {
   title: string,
@@ -112,7 +111,7 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
           play: PlayButton,
           forward: ForwardButton,
           pause: PauseButton,
-          previous: BackwardButton,
+          // previous: BackwardButton,
         }}
         autoPlay
       />
