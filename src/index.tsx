@@ -62,6 +62,10 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   const classes = useStyles();
   const audioLength = props.audioObjectArray.length;
   const [indexPlaying, setIndexPlaying] = React.useState(0);
+  const PlayButtonIcon = <img src={PlayButton} alt='Play Button'></img>
+  const BackwardButtonIcon = <img src={BackwardButton} alt='Backward Button'></img>
+  const PauseButtonIcon = <img src={PauseButton} alt='Pause Button'></img>
+  const ForwardButtonIcon = <img src={ForwardButton} alt='Forward Button'></img>
 
   const playForward = () => {
     let newIndex: number;
@@ -107,10 +111,10 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
         showSkipControls
         showJumpControls = {false}
         customIcons = {{
-          play: PlayButton,
-          forward: ForwardButton,
-          pause: PauseButton,
-          previous: BackwardButton,
+          play: PlayButtonIcon,
+          forward: ForwardButtonIcon,
+          pause: PauseButtonIcon,
+          previous: BackwardButtonIcon,
         }}
         autoPlay
       />
