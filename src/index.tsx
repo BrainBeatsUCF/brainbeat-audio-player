@@ -5,7 +5,7 @@ import 'react-h5-audio-player/lib/styles.css';
 const PlayButton = require('../public/assets/playButton.png');
 const BackwardButton = require('../public/assets/backButton.png');
 const PauseButton = require('../public/assets/pauseButton.png');
-const ForwardButton = require('../publicassets/forwardButton.png');
+const ForwardButton = require('../public/assets/forwardButton.png');
 
 interface AudioObject {
   title: string,
