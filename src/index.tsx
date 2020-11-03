@@ -70,6 +70,8 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   const PauseButtonIcon = <img src={PauseButton} alt='Pause Button'></img>
   const ForwardButtonIcon = <img src={ForwardButton} alt='Forward Button'></img>
 
+  console.log('indexPlaying: ' + indexPlaying);
+
   const playForward = () => {
     let newIndex: number;
     if (indexPlaying === audioLength - 1) {
