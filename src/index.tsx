@@ -112,8 +112,8 @@ const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
         showJumpControls = {false}
         customIcons = {{
           play: PlayButtonIcon,
-          forward: ForwardButtonIcon,
           pause: PauseButtonIcon,
+          next: ForwardButtonIcon,
           previous: BackwardButtonIcon,
         }}
         autoPlay
