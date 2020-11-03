@@ -2,9 +2,13 @@ import * as React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+// @ts-ignore
 import PlayButton from './assets/playButton.png';
+// @ts-ignore
 import BackwardButton from './assets/backButton.png';
+// @ts-ignore
 import PauseButton from './assets/pauseButton.png';
+// @ts-ignore
 import ForwardButton from './assets/forwardButton.png';
 
 interface AudioObject {
