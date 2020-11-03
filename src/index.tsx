@@ -20,6 +20,7 @@ interface AudioPlayerProps {
   audioObjectArray: AudioObject[],
   style?: React.CSSProperties,
   setPlayingIndexAudioPackage: any,
+  startingPlayingIndex: number,
 }
 
 const useStyles = makeStyles(() => ({
@@ -61,7 +62,9 @@ const useStyles = makeStyles(() => ({
 const BrainBeatsAudioPlayer: React.FC<AudioPlayerProps> = ({...props}) => {
   const classes = useStyles();
   const audioLength = props.audioObjectArray.length;
-  const [indexPlaying, setIndexPlaying] = React.useState(0);
+
+  // Todo: props.startIndexPlaying
+  const [indexPlaying, setIndexPlaying] = React.useState(props.startingPlayingIndex);
   const PlayButtonIcon = <img src={PlayButton} alt='Play Button'></img>
   const BackwardButtonIcon = <img src={BackwardButton} alt='Backward Button'></img>
   const PauseButtonIcon = <img src={PauseButton} alt='Pause Button'></img>
