@@ -48,13 +48,8 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     height: 80,
     width: 80,
-    // border: 'solid rgb(208, 53, 30) 1px',
-    // borderRadius: '130px',
-
-    border: '1px solid transparent',
-    borderColor: 'rgb(208, 53, 30, 0.3)',
-   animation: 'glow 1s infinite alternate',
-   transition: 'border 1s linear, box-shadow 1s linear',
+    border: 'solid rgb(208, 53, 30) 1px',
+    borderRadius: '130px',
   },
   audioPicture: {
     height: 60,
